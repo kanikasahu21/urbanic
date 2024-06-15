@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* #main {
+    width: 100%;
+    height: 100%;
+} */
+#page1 {
+    min-height: 100vh;
+    width: 100%;
+}
+
+#top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    pointer-events: none;
+}
+
+#nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 15px;
+}
+
+#ur-img {
+    pointer-events: all;
+    margin-right: 230px;
+}
+
+#nav img {
+    height: 2.9vw;
+    margin-right: 20px;
+    cursor: pointer;
+
+}
+
+#nav-left {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+#nav-left a {
+    text-decoration: none;
+    font-size: 1.15vw;
+    color: black;
+    font-weight: 600;
+    pointer-events: all;
+}
+
+#nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#nav-right svg {
+    cursor: pointer;
+    pointer-events: all;
+}
+
+#back {
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+#back img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    padding: 7.3vw 0;
+}
+
+.moving-text::-webkit-scrollbar {
+    display: none;
+}
+
+.moving-text {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.container {
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: movinganimation;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.moving-text h1 {
+    font-size: 4vw;
+    display: inline-block;
+    padding-right: 25px;
+    padding-left: 25px;
+    font-weight: 100;
+    color: black;
+    font-family: Golden Class Font Duo serif;
+}
+
+@keyframes movinganimation {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* margin-top: 100px; */
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.5s;
+    margin-left: 25px;
+}
+
+/* p{
+    font-size: 2.3vw;
+    margin-left: 400px;
+    margin-top: 50px;
+    font-weight: 400;
+} */
+.swiper-wrapper {
+    display: flex;
+    gap: 50px;
+    margin-left: 20px;
+}
+
+.swiper-slide:hover {
+    scale: 1.1;
+}
+
+.card {
+    height: 435px;
+    width: 320px;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    padding-left: 35px;
+    padding-top: 20px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 40px;
+}
+
+.content {
+    margin-top: 20px;
+    margin-right: 90px;
+}
+
+.content p {
+    font-size: 15px;
+    font-weight: 300;
+    font-family: gilroy;
+}
+
+.content h5 {
+    padding-top: 5px;
+    font-weight: 100;
+    padding-right: 130px;
+}
+
+.content img {
+    height: 15px;
+    width: 92px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.cart-icon {
+    height: 50px;
+    width: 200px;
+}
+
+#denim {
+    padding-right: 54px;
+}
+
+#pullover {
+    padding-right: 35px;
+}
+
+#wideleg {
+    padding-right: 57px;
+}
+
+#skirt {
+    width: 120%;
+    padding-left: 8px;
+}
+
+#coats {
+    width: 120%;
+    padding-right: 17px;
+}
+
+#miniskirt {
+    padding-right: 20px
+}
+
+#jumpsuit {
+    padding-left: 5px;
+}
+
+#jumpsuit2 {
+    padding-right: 30px;
+}
+
+#dress {
+    padding-right: 47px;
+}
+
+#dress2 {
+    padding-right: 40px;
+}
+
+#dress3 {
+    width: 120%;
+    padding-right: 20px;
+}
+
+#cord {
+    width: 130%;
+    padding-left: 5px;
+}
+
+#shirt {
+    padding-right: 50px;
+}
+
+#dress4 {
+    width: 100%;
+    padding-right: 10px;
+}
+
+#dress5 {
+    padding-right: 25px;
+}
+
+#playsuit {
+    padding-right: 58px;
+}
+
+#cord2 {
+    padding-right: 35px;
+}
+
+#tshirt2 {
+    padding-right: 20px;
+}
+
+#detailsport {
+    padding-left: 3.5px;
+}
+
+#gym {
+    padding-right: 55px;
+}
+
+#bag {
+    width: 120%;
+    padding-left: 6px;
+}
+
+#denim2 {
+    padding-right: 53px;
+}
+
+#tote {
+    margin-bottom: 20px;
+}
