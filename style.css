@@ -2,24 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
-        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 html,
 body {
     height: 100%;
     width: 100%;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
     display: none;
 }
 
-/* #main {
-    width: 100%;
-    height: 100%;
-} */
 #page1 {
     min-height: 100vh;
     width: 100%;
@@ -35,12 +32,13 @@ body::-webkit-scrollbar {
 }
 
 #nav {
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 15px;
+    z-index: 99;
 }
 
 #ur-img {
@@ -48,17 +46,18 @@ body::-webkit-scrollbar {
     margin-right: 230px;
 }
 
-#nav img {
+img {
     height: 2.9vw;
     margin-right: 20px;
     cursor: pointer;
-
 }
 
 #nav-left {
     display: flex;
     align-items: center;
     gap: 17px;
+    font-family: apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 #nav-left a {
@@ -83,7 +82,7 @@ body::-webkit-scrollbar {
 #back {
     top: 0;
     left: 0;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     overflow: hidden;
 }
@@ -97,7 +96,18 @@ body::-webkit-scrollbar {
 #page2 {
     height: 100vh;
     width: 100%;
-    padding: 7.3vw 0;
+    padding: 8vw 0;
+}
+
+#nav2 {
+    position: absolute;
+    top: 120%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 15px;
+    z-index: 99;
 }
 
 .moving-text::-webkit-scrollbar {
@@ -119,14 +129,16 @@ body::-webkit-scrollbar {
 }
 
 .moving-text h1 {
-    font-size: 4vw;
+    font-size: 2.7vw;
     display: inline-block;
-    padding-right: 25px;
-    padding-left: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
     font-weight: 100;
     color: black;
     font-family: Golden Class Font Duo serif;
+    text-transform: uppercase;
 }
+
 
 @keyframes movinganimation {
     from {
@@ -141,11 +153,12 @@ body::-webkit-scrollbar {
 .swiper {
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    /* margin-top: 100px; */
+    margin-top: 20px;
 }
 
 .swiper-slide {
+    height: 100%;
+    width: 100%;
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -156,12 +169,6 @@ body::-webkit-scrollbar {
     margin-left: 25px;
 }
 
-/* p{
-    font-size: 2.3vw;
-    margin-left: 400px;
-    margin-top: 50px;
-    font-weight: 400;
-} */
 .swiper-wrapper {
     display: flex;
     gap: 50px;
@@ -181,6 +188,13 @@ body::-webkit-scrollbar {
     padding-top: 20px;
 }
 
+.card svg {
+    position: absolute;
+    top: 16%;
+    right: 15%;
+    cursor: pointer;
+}
+
 .swiper-slide img {
     display: block;
     width: 250px;
@@ -194,25 +208,26 @@ body::-webkit-scrollbar {
 .content {
     margin-top: 20px;
     margin-right: 90px;
+    font-family: apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 .content p {
     font-size: 15px;
-    font-weight: 300;
-    font-family: gilroy;
+    font-weight: 400;
 }
 
 .content h5 {
     padding-top: 5px;
-    font-weight: 100;
-    padding-right: 130px;
+    font-weight: 400;
+    padding-right: 110px;
 }
 
 .content img {
     height: 15px;
     width: 92px;
     margin-top: 10px;
-    margin-left: 5px;
+    margin-left: 12px;
 }
 
 .cart-icon {
@@ -316,4 +331,221 @@ body::-webkit-scrollbar {
 
 #tote {
     margin-bottom: 20px;
+}
+
+.p1 {
+    height: 100vh;
+    width: 100vw;
+    background-color: aquamarine;
+}
+
+#page3 {
+    max-width: 100vw;
+    background-color: bisque;
+}
+
+.dresses,
+.teejeans,
+.skirts,
+.tops {
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10vw;
+    transition: all ease 0.5s;
+}
+
+.images-left,
+.images-right {
+    height: 95%;
+}
+
+.images-left img,
+.images-right img {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.content-right,
+.content-left {
+    height: 95%;
+}
+
+.content-right h1,
+.content-left h1 {
+    font-size: 10vh;
+    font-weight: 900;
+}
+
+.content-right h2,
+.content-left h2 {
+    font-size: 5vh;
+    font-weight: 400;
+}
+
+.buttonmore {
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 14px 55px;
+    border-radius: 10px;
+    margin-top: 30px;
+    font-size: 14px;
+    transition: all ease 0.5s;
+}
+
+.content-right button:active {
+    scale: 1.1;
+}
+
+.content-left button:active {
+    scale: 1.1;
+}
+
+#page4 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: bisque;
+}
+
+#page4 #div1 {
+    position: absolute;
+    top: 590%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+
+#page4 img {
+    height: 250px;
+    width: 250px;
+    display: flex;
+    border-radius: 50px;
+}
+
+#page4 h3 {
+    display: flex;
+    padding-left: 51px;
+    font-size: 35px;
+    font-weight: 200;
+}
+
+#page4 h1 {
+    display: flex;
+    font-size: 40px;
+    font-weight: 200;
+}
+
+#login {
+    padding-top: 45px;
+    padding-left: 90px;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.inputbox input {
+    margin: 25px 50px;
+}
+
+#form #email {
+    display: flex;
+    position: absolute;
+    top: 83%;
+    left: 41%;
+    width: 280px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#form .inputbox {
+    position: absolute;
+}
+
+#h1 {
+    height: 45%;
+    display: flex;
+    position: absolute;
+    top: 96%;
+    left: 50%;
+}
+
+#page4 img {
+    position: absolute;
+    left: 43.5%;
+    top: 539%;
+}
+
+#page5 {
+    height: 100vh;
+    width: 100%;
+    background-color: bisque;
+}
+
+#work {
+    height: 45%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 60px;
+}
+
+#work1 {
+    height: 100%;
+    width: 30%;
+    border-right: 2px solid black;
+    padding: 50px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#work1 p {
+    font-size: 50px;
+}
+
+#work2 {
+    height: 100%;
+    width: 70%;
+
+    padding: 0 60px;
+}
+
+.work2-part p {
+    padding-top: 5px;
+}
+
+.work2-part {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#icons {
+    display: flex;
+    gap: 19px;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    margin-top: 2%;
+
+}
+
+#paragraph {
+    font-size: 17px;
+    margin-left: 410px;
+    margin-top: 130px;
+}
+
+.lan {
+    position: absolute;
+    top: 700%;
+    left: 40%;
+    border: none;
+    border-radius: 50px;
+    padding: 5px 7px;
 }
