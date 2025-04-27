@@ -110,11 +110,11 @@ img {
     z-index: 99;
 }
 
-/* .moving-text::-webkit-scrollbar {
+.moving-text::-webkit-scrollbar {
     display: none;
-} */
+} 
 
-/* .moving-text {
+.moving-text {
     white-space: nowrap;
     overflow-x: auto;
     position: relative;
@@ -150,48 +150,7 @@ img {
     to {
         transform: translateX(-100%);
     }
-}  */
-
-
-.moving-text {
-    white-space: nowrap;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    overflow-y: hidden; /* Hide vertical scrollbar */
-    position: relative;
-    bottom: 10%;
-}
-
-.container {
-    white-space: nowrap;
-    display: inline-block;
-    animation-name: movinganimation;
-    animation-duration: 25s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-.moving-text h1 {
-    font-size: 2.7vw;
-    display: inline-block;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-weight: 100;
-    color: black;
-    font-family: "Golden Class Font Duo", serif;
-    text-transform: uppercase;
-    background-color: yellow; /* Temporary background for debugging */
-    border: 1px solid red; /* Temporary border for debugging */
-}
-
-@keyframes movinganimation {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100vw); /* Move the text across the screen */
-    }
-}
-
+} 
 
 .swiper {
     width: 100%;
