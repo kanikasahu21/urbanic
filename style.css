@@ -112,7 +112,7 @@ img {
 
 /* .moving-text::-webkit-scrollbar {
     display: none;
-}
+} */
 
 .moving-text {
     white-space: nowrap;
@@ -150,47 +150,7 @@ img {
     to {
         transform: translateX(-100%);
     }
-} */
-
-.moving-text {
-    white-space: nowrap;
-    overflow: hidden; /* Hide the scrollbar */
-    position: relative;
-    bottom: 10%;
-}
-
-.container {
-    white-space: nowrap;
-    display: inline-block;
-    animation-name: movinganimation;
-    animation-duration: 25s; /* You can reduce this to make it faster */
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-.moving-text h1 {
-    font-size: 2.7vw; /* You can increase or decrease this */
-    display: inline-block;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-weight: 100;
-    color: black;
-    font-family: "Golden Class Font Duo", serif;
-    text-transform: uppercase;
-    background-color: yellow; /* Temporary background to make the text visible */
-    border: 1px solid red; /* Temporary border for debugging */
-}
-
-@keyframes movinganimation {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100vw); /* Change this to move across full screen */
-    }
-}
-
-
+} 
 
 
 .swiper {
