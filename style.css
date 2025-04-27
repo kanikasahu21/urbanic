@@ -110,7 +110,7 @@ img {
     z-index: 99;
 }
 
-.moving-text::-webkit-scrollbar {
+/* .moving-text::-webkit-scrollbar {
     display: none;
 }
 
@@ -150,7 +150,46 @@ img {
     to {
         transform: translateX(-100%);
     }
+} */
+
+.moving-text {
+    white-space: nowrap;
+    overflow: hidden; /* Hide the scrollbar */
+    position: relative;
+    bottom: 10%;
 }
+
+.container {
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: movinganimation;
+    animation-duration: 25s; /* You can reduce this to make it faster */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.moving-text h1 {
+    font-size: 2.7vw; /* You can increase or decrease this */
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 100;
+    color: black;
+    font-family: "Golden Class Font Duo", serif;
+    text-transform: uppercase;
+}
+
+@keyframes movinganimation {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100vw); /* Change this to move across full screen */
+    }
+}
+
+
+
 
 .swiper {
     width: 100%;
