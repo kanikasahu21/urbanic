@@ -177,6 +177,8 @@ img {
     color: black;
     font-family: "Golden Class Font Duo", serif;
     text-transform: uppercase;
+    background-color: yellow; /* Temporary background to make the text visible */
+    border: 1px solid red; /* Temporary border for debugging */
 }
 
 @keyframes movinganimation {
