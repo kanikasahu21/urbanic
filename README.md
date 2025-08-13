@@ -2,7 +2,7 @@
 
 A redesigned fashion e-commerce website with a fresh, modern UI and advanced animations for an engaging shopping experience.
 
-** Live Link :** https://kanikasahu21.github.io/urbanic/
+ Live Link : https://kanikasahu21.github.io/urbanic/
 
 ---
 
